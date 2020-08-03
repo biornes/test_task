@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block link %}<a href="">Назад к списку</a>{% endblock link %}
+{% block header %} {{ header }} {% endblock header %}
+{% block content %}
+
+	<form method='POST' name='Send Image'>
+		
+		{% csrf_token %}
+		{% for field in form %}
+		<table cols='2'>
+		<tr>
+ 			<td>{{ field.label_tag }}</td>
+ 		</tr>
+ 		<tr>
+ 			<td>{{ field }}</td>
+ 		</tr>
+ 		{% endfor %}
+ 		<td><input type="Submit" name="" value="Выбрать"></input></td>
+ 		</table>
+
+	</form>
+
+{% endblock content %}
