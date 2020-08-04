@@ -6,7 +6,11 @@
 <a href="/addImage">{{ content }}</a>
 <table>
 {% for line in db %}
-<a href="/imageParams/{{ line.path }}">{{ line.path }}</a>
-</table>
+<tr>
+	<td>
+		<a href="/imageParams/{{ line.path }}">{{ line.path }}</a>
+	</td>
+</tr>
 {% endfor %}
+</table>
 {% endblock content %}
