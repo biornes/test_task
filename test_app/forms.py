@@ -7,5 +7,5 @@ class ImageParams(forms.Form):
 
 
 class NewImage(forms.Form):
-	link = forms.CharField(label = 'Cсылка')
-	file = forms.CharField(label = 'Файл')
+	fileLink = forms.CharField(label = 'Cсылка', required = False)
+	fileLocal = forms.ImageField(label = 'Файл', required = False)

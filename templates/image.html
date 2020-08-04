@@ -1,10 +1,9 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block link %}<a href="/">Назад к списку</a>{% endblock link %}
 {% block header %} {{ header }} {% endblock header %}
 {% block content %}
-
-	<form enctype="multipart/form-data" method='POST' name='Send Image'>
+	<form method='POST' name='ImageParams'>
 		
 		{% csrf_token %}
 		<table cols='2'>
@@ -20,5 +19,5 @@
  		</table>
 
 	</form>
-
+	<img src="{{ src }}" width="{{ width }}" height="{{ height }}">
 {% endblock content %}
