@@ -1,11 +1,10 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block link %}<a href="/">Назад к списку</a>{% endblock link %}
 {% block header %} {{ header }} {% endblock header %}
 {% block content %}
 
-	<form enctype="multipart/form-data" method='POST' name='Send Image'>
-		
+	<form enctype="multipart/form-data" method='POST' name='SendImage'>
 		{% csrf_token %}
 		<table cols='2'>
 		{% for field in form %}
@@ -20,5 +19,6 @@
  		</table>
 
 	</form>
-
+	<script src="{% static 'script.js' %}"></script>
 {% endblock content %}
+

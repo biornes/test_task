@@ -20,10 +20,5 @@ from test_app import views
 urlpatterns = [
 	path('', views.index, name = 'Index'),
 	path('addImage/', views.addImage, name = 'Add Image'),
-    path('imageParams/<str:imagename>', views.imageParams, name = "Image Parameters"),
-    re_path(r'^imageParams/(?P<imagename>[.]*)', views.imageParams, name = "Image Parameters"),
-
-    # path('121', views.addImage, name = 'Add Image'),
-
-    # path('admin/', admin.site.urls),
+    path('imageParams/<str:imageName>', views.imageParams, name = "Image Parameters"),
 ]
